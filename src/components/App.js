@@ -1,11 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../imgs.json';
+import './App.scss';
+import Main from './Auth/Main';
 
 function App() {
+  console.log(logo.orange);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+  <Main formType = 'login'/>
+    /* <div className="App">
+      
+       <header className="App-header">
+        <img src={logo.main} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+     </div> */
   );
 }
 

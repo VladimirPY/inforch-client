@@ -1,0 +1,48 @@
+@import './colors';
+@import './fonts.scss';
+
+body, html {
+    margin:0;
+    background-color: $base-background-color;
+    font-family: Helvetica;
+}
+
+.flex {
+    display: flex;
+}
+
+input{
+    height: 60px;
+    width: 100%;
+    background: #FFFCF2;
+    border: 10px solid #252422;
+    box-sizing: border-box;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFCF2;
+    padding: 22px 70px;
+    border-radius: 4px;
+}
+
+.btn.dark{
+    background-color: $dark-theme-color;
+}
+
+.btn.orange{
+    background-color: $dark-theme-color;
+}
+
+.btn.light{
+    background-color: $dark-theme-color;
+}
+
+.gray-button {
+    background-color: $dark-theme-color;
+}
