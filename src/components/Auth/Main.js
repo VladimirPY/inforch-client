@@ -1,4 +1,3 @@
-//TODO: refactoring and comment all
 import React from 'react';
 import Signin from './Signin.js';
 import Login from './Login.js';
@@ -16,9 +15,8 @@ export default class Main extends React.Component {
 
     constructor (props){
         super(props);
-        let formType = props.formType;
         this.state = {
-            formType : formType ?? 'login'
+            formType : props.formType
         };
     }
 
@@ -38,9 +36,9 @@ export default class Main extends React.Component {
                 </div>
                 <div className = 'form-panel'>
                     <div className = 'form-title'>
-                        <span>{title_data.title}</span>
+                        {title_data.title}
                         <span>{title_data.question_text}
-                            <a onClick = {this.changeForm.bind(this)}>{title_data.url_text}</a>
+                            <a onClick = {this.changeForm.bind(this)}>&nbsp;{title_data.url_text}</a>
                         </span>
                     </div>
                     {form}
@@ -53,7 +51,7 @@ export default class Main extends React.Component {
         let data = {};
         if(this.state.formType == 'login'){
             data = { 
-                title : <p><b>LOG</b>IN</p>,
+                title : <p><b>LOG</b>&nbsp;IN</p>,
                 question_text : 'YOU DON`T HAVE AN ACCOUNT?',
                 url_text : 'SIGN IN',
                 url_route : 'signin'

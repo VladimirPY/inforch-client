@@ -15,11 +15,9 @@ import './Signin.scss';
     render(){
         return (
             <form id = 'signin-form' onSubmit = {this.handleSubmit}>
-                <div className = 'input-field'>
-                    <label htmlFor = 'email'>EMAIL ADRESS</label>
-                    <input name = 'email' type = 'text'/>
-                </div>
-                <div className = 'input-field'>
+                <label htmlFor = 'email'>EMAIL</label>
+                <input name = 'email' type = 'email'/>
+                <div className = 'name-fields flex j-space-between'>
                     <div>
                         <label htmlFor = 'name'>NAME</label>
                         <input name = 'name' type = 'text'/>
@@ -28,26 +26,14 @@ import './Signin.scss';
                         <label htmlFor = 'last_name'>LAST NAME</label>
                         <input name = 'last_name' type = 'text'/>
                     </div>
-                </div>                    
-                <div className = 'input-field'>
-                    <label htmlFor = 'password'>PASSWORD</label>
-                    <input name = 'password' type = 'password'/>
-                    {/* <img src = ''/> */}
-                </div>
-                <div className = 'input-field'>
-                    <div>
-                        <label htmlFor = 'name'>DAY</label>
-                        <input name = 'name' type = 'text'/>
-                    </div>
-                    <div>
-                        <label htmlFor = 'last_name'>MONTH</label>
-                        <input name = 'last_name' type = 'text'/>
-                    </div>
-                    <div>
-                        <label htmlFor = 'last_name'>YEAR</label>
-                        <input name = 'last_name' type = 'text'/>
-                    </div>
-                </div>
+                </div>          
+
+                <label htmlFor = 'password'>PASSWORD</label>
+                <input name = 'password' type = 'password'/>
+
+                <label htmlFor = 'date'>DAY</label>
+                <input name = 'date' type = 'date'/>
+    
                 <button type = 'submit' className = 'btn dark'>SIGN IN</button>
             </form>
         )

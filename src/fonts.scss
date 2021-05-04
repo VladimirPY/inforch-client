@@ -5,3 +5,11 @@
      url("fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"),
      url("fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: 'HelveticaBlack';
+    src: url("./fonts/HelveticaBlack/HelveticaBlack.ttf"),
+     url("fonts/HelveticaBlack/HelveticaBlack.eot") format("eot"),
+     url("fonts/HelveticaBlack/HelveticaBlack.woff") format("woff"),
+     url("fonts/HelveticaBlack/HelveticaBlack.ttf") format("truetype");
+}
