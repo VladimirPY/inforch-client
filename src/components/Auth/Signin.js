@@ -1,5 +1,5 @@
 import React from "react";
-import './Signin.scss';
+import Input from "../UI/Input";
 
 /**
  * Component render a SignIn form
@@ -15,25 +15,13 @@ import './Signin.scss';
     render(){
         return (
             <form id = 'signin-form' onSubmit = {this.handleSubmit}>
-                <label htmlFor = 'email'>EMAIL</label>
-                <input name = 'email' type = 'email'/>
+                <Input lableText = 'EMAIL ADRESS' inputAttributes = {{id: "input-email", type: 'email', name: 'email'}}/>
                 <div className = 'name-fields flex j-space-between'>
-                    <div>
-                        <label htmlFor = 'name'>NAME</label>
-                        <input name = 'name' type = 'text'/>
-                    </div>
-                    <div>
-                        <label htmlFor = 'last_name'>LAST NAME</label>
-                        <input name = 'last_name' type = 'text'/>
-                    </div>
+                    <Input lableText = 'NAME' inputAttributes = {{id: "input-name", type: 'text', name: 'name'}}/>
+                    <Input lableText = 'LAST NAME' inputAttributes = {{id: "input-last-name", type: 'text', name: 'last_name'}}/>
                 </div>          
-
-                <label htmlFor = 'password'>PASSWORD</label>
-                <input name = 'password' type = 'password'/>
-
-                <label htmlFor = 'date'>DAY</label>
-                <input name = 'date' type = 'date'/>
-    
+                <Input lableText = 'PASSWORD' inputAttributes = {{id: "input-password", type: 'password', name: 'last_name'}}/>
+                <Input lableText = 'BIRTH DATE' inputAttributes = {{id: "input-birth-date", type: 'date', name: 'birth-date'}}/>
                 <button type = 'submit' className = 'btn dark'>SIGN IN</button>
             </form>
         )

@@ -10,6 +10,9 @@ body, html {
 .flex {
     display: flex;
 }
+.column{
+    flex-direction: column;
+}
 .j-space-between{
     justify-content: space-between;
 }
@@ -19,13 +22,18 @@ body, html {
 .j-center{
     justify-content: center;
 }
-input{
-    height: 60px;
-    width: 100%;
-    background: #FFFCF2;
-    border: 10px solid #252422;
-    box-sizing: border-box;
+
+.a-i-center{
+    align-items: center;
 }
+
+// input{
+//     height: 60px;
+//     width: 100%;
+//     background: #FFFCF2;
+//     border: 10px solid #252422;
+//     box-sizing: border-box;
+// }
 
 .btn {
     cursor: pointer;
@@ -44,7 +52,7 @@ input{
 }
 
 .btn.orange{
-    background-color: $dark-theme-color;
+    background-color: $orange-theme-color;
 }
 
 .btn.light{
@@ -53,4 +61,24 @@ input{
 
 .gray-button {
     background-color: $dark-theme-color;
+}
+
+.back-dark{
+    background-color: $dark-theme-color;
+}
+
+.back-light{
+    background-color: $light-color;
+}
+
+.border-orange{
+    border-color: $orange-theme-color!important;
+}
+
+.border{
+    border: solid 10px;
+}
+
+.hide{
+    display: none!important;
 }

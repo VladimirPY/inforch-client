@@ -1,0 +1,18 @@
+@import '../../colors.scss';
+.input-field{
+    width: 100%;
+    input{
+        height: 60px;
+        width: 100%;
+        background: $base-background-color;
+        border: 10px solid $dark-theme-color;
+        box-sizing: border-box;
+    }
+    label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        color: $light-color;
+    }
+}

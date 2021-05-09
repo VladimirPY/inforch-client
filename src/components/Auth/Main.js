@@ -1,15 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Signin from './Signin.js';
 import Login from './Login.js';
-import logos from '../../imgs.json';
+import App from '../App.js';
+import logos from '../../logo.json';
 import './Main.scss';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-import { render } from '@testing-library/react';
 
 export default class Main extends React.Component {
 
@@ -28,9 +23,11 @@ export default class Main extends React.Component {
         }else if(this.state.formType == 'signin'){
             form =  <Signin />;
         }
+        console.log('/images/Cross.svg');
 
         return (
-            <div className = 'form-frame flex'>
+            <div id = {'auth-form[' + this.state.formType + ']'} className = 'form-frame flex'>
+                <img class = 'close-cross' src = {process.env.PUBLIC_URL + '/images/Cross.svg'} onClick = {this.closeForm.bind(this)}/>
                 <div className = 'logo-img'>
                     <img src = {process.env.PUBLIC_URL + logos.orange}/>
                 </div>
@@ -72,6 +69,14 @@ export default class Main extends React.Component {
         this.setState({
             formType : this.state.formType == 'login' ? 'signin' : 'login'   
         });
+    }
+
+    closeForm(event){
+        event.preventDefault();
+        ReactDOM.render(
+            <App/>,
+            document.getElementById('root')
+        );
     }
 
 } 

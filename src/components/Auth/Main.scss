@@ -1,9 +1,22 @@
-@import '../../colors';
+@import '../../colors.scss';
+@import '../../animation.scss';
 .form-frame{
+    .hide{
+        @include animation(0.6, 1, animation-slide-up);
+    }
     width: 100%;
     height: 100vh;
     position: absolute;
     background-color: $dark-theme-color;
+
+    .close-cross{
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
 
     .logo-img{
         overflow: hidden;
@@ -19,19 +32,12 @@
         width: 40%;
         background-color: $orange-theme-color;
         padding: 105px;
-        label {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 18px;
-            color: $light-color;
-        }
+        overflow: auto;
 
         input {
             margin-top: 15px;
             margin-bottom: 42px;
             font-size: 18px;
-
         }
 
         .form-title{

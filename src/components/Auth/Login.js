@@ -1,10 +1,10 @@
 import React from "react";
-import './Login.scss';
+import Input from '../UI/Input.js';
 
 /**
  * Component render a SignIn form
  */
- export default class Signin extends React.Component {
+ export default class Login extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,17 +13,20 @@ import './Login.scss';
     }
 
     render(){
+        const emailAttributes = {
+            id : 'input-email',
+            name : 'email',
+            type : 'text'
+        };
+        const passwordAttributes = {
+            id : 'input-password',
+            name : 'password',
+            type : 'password'
+        };
         return (
             <form id = 'signin-form' onSubmit = {this.handleSubmit}>
-                <div className = 'input-field'>
-                    <label htmlFor = 'email'>EMAIL ADRESS</label>
-                    <input name = 'email' type = 'text'/>
-                </div>
-                <div className = 'input-field'>
-                    <label htmlFor = 'password'>PASSWORD</label>
-                    <input name = 'password' type = 'password'/>
-                    {/* <img src = ''/> */}
-                </div>
+                <Input lableText = 'EMAIL ADRESS' inputAttributes = {emailAttributes}/>
+                <Input lableText = 'PASSWORD' inputAttributes = {passwordAttributes}/>
                 <button type = 'submit' className = 'btn dark'>LOG IN</button>
             </form>
         )
