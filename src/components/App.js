@@ -1,11 +1,15 @@
 import logo from '../logo.json';
 import './App.scss';
 import Header from './Header/Header';
+import PostList from './Post/PostList';
+import AuthMain from './Auth/Main';
 
 function App() {
-  console.log(logo.orange);
   return (
+    <div>
     <Header isAuth = {true}/>
+    <PostList />
+    </div>
   );
 }
 

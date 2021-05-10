@@ -17,19 +17,19 @@ export default class Main extends React.Component {
 
     render(){
         let form = <div>No form selected!</div>,
-            title_data = this.defineFormTitleData();
-        if(this.state.formType == 'login'){
+        title_data = this.defineFormTitleData();
+        
+        if(this.state.formType === 'login'){
             form = <Login />;
-        }else if(this.state.formType == 'signin'){
+        }else if(this.state.formType === 'signin'){
             form =  <Signin />;
         }
-        console.log('/images/Cross.svg');
 
         return (
             <div id = {'auth-form[' + this.state.formType + ']'} className = 'form-frame flex'>
                 <img class = 'close-cross' src = {process.env.PUBLIC_URL + '/images/Cross.svg'} onClick = {this.closeForm.bind(this)}/>
                 <div className = 'logo-img'>
-                    <img src = {process.env.PUBLIC_URL + logos.orange}/>
+                    <img src = {process.env.PUBLIC_URL + logos.orange} alt = 'Logo'/>
                 </div>
                 <div className = 'form-panel'>
                     <div className = 'form-title'>
@@ -46,14 +46,14 @@ export default class Main extends React.Component {
 
     defineFormTitleData() {
         let data = {};
-        if(this.state.formType == 'login'){
+        if(this.state.formType === 'login'){
             data = { 
                 title : <p><b>LOG</b>&nbsp;IN</p>,
                 question_text : 'YOU DON`T HAVE AN ACCOUNT?',
                 url_text : 'SIGN IN',
                 url_route : 'signin'
             };
-        }else if(this.state.formType == 'signin'){
+        }else if(this.state.formType === 'signin'){
             data = {
                 title : <p><b>CREATE</b> AN ACCOUNT</p>,
                 url_text : 'LOG IN',
@@ -67,7 +67,7 @@ export default class Main extends React.Component {
     changeForm(event){
         event.preventDefault();
         this.setState({
-            formType : this.state.formType == 'login' ? 'signin' : 'login'   
+            formType : this.state.formType === 'login' ? 'signin' : 'login'   
         });
     }
 

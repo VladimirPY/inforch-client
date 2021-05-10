@@ -1,21 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import AuthFrame from '../Auth/Main.js';
+import React, {useState, useRef, useEffect} from 'react';
 import Input from '../UI/Input';
 import Avatar from '../Avatar/Avatar';
-import logo from '../../logo.json';
 import './HeaderAuth.scss';
 
-export default function Header(props){
-
-    function showAuthForm(event){
-        ReactDOM.render(
-            <AuthFrame formType = {event.target.name}/>,
-            document.getElementById('root')
-        );
-    }
-
-    function handleKeydown(event){
+export default function HeaderAuth(props){
+    function startSearch(event){
+        if(event.key !== 'Enter'){
+            console.log('nenen');
+        }
         console.log('asdasd');
     }
     
@@ -26,8 +18,9 @@ export default function Header(props){
                 <img className = 'border border-orange' src = {process.env.PUBLIC_URL + "/images/home_btn.svg"}/>
                 <img className = 'border border-orange' src = {process.env.PUBLIC_URL + "/images/hot_btn.svg"}/>
                 <img className = 'border border-orange' src = {process.env.PUBLIC_URL + "/images/plus_btn.svg"}/>
+                <img className = 'border border-orange ' src = {process.env.PUBLIC_URL + "/images/search_light.svg"}/>
 
-                <Input inputAttributes = {{type : 'text', class : 'border-orange'}} onKeydown = {handleKeydown}/>
+                <Input inputAttributes = {{type : 'text', className : 'border-orange'}}/>
             </div>
         </header>
     );

@@ -8,14 +8,13 @@
     position: absolute;
     width: 100px;
     border: solid 5px $orange-theme-color;
-    max-height: 300px;
-    overflow: auto;
+    // max-height: 300px;
     &::before{
         content: '';
         position: absolute;
         width: 0; 
         height: 0;
-        top: -10px;
+        top: -16px;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-bottom: 15px solid  $orange-theme-color;

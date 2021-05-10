@@ -1,36 +1,47 @@
-import React from 'react';
-import './Avatar.scss'
+import React, {useState, useEffect} from 'react';
+import './Avatar.scss';
 
 export default function Avatar(props){
-    const img = <img id = 'avatar-btn' className = 'avatar border border-orange back-light' src = {process.env.PUBLIC_URL + "/images/photo.svg"}/>;
-    const profile_options = (
-        <nav id = 'profile-options' class = 'hide back-light'>
+    const avatar_btn_id = 'avatar-btn';
+    const [showList, setShowList] = useState(false);
+    
+
+    useEffect(() => {
+        window.addEventListener('click', showOptionList);
+        return () => {
+            window.removeEventListener('click', showOptionList)
+        }
+    })
+
+    function showOptionList(event){
+        if(event.target == document.getElementById(avatar_btn_id) && !showList){
+            setShowList(true);
+        }else{
+            setShowList(false);
+        }
+    }
+
+    let option_list = showList && <UserOptions top = {document.getElementById(avatar_btn_id).offsetHeight}/>
+    
+    return(
+        <div id = 'profile-avatar'>
+            {option_list}
+            <img id = {avatar_btn_id} className = 'avatar border border-orange back-light' src = {process.env.PUBLIC_URL + "/images/photo.svg"}/>
+        </div>
+    );
+};
+
+function UserOptions(props){
+    const top_position = props.top ? props.top + 20 : 0;
+    const styles = {
+        top: top_position + 'px'
+    };
+
+    return (        
+        <nav id = 'profile-options' className = 'back-light' style = {styles}>
             1<br/>
             1<br/>
             1<br/>
         </nav>
-    );
-    window.addEventListener('click', showOptionList);
-
-    function showOptionList(event){
-        let btn = document.getElementById('avatar-btn');
-        let option_list = document.getElementById('profile-options');        
-        console.log(option_list.classList.contains('hide'));
-
-         if(event.target == btn){
-            let position_top = event.target.offsetHeight + 20;
-            option_list.classList.toggle('hide');
-            option_list.style.top = position_top + 'px';
-        }
-        else if(event.target != option_list && !option_list.classList.contains('hide')){
-            option_list.classList.add('hide');    
-        }
-    }
-    
-    return(
-        <div id = 'profile-avatar'>
-            {profile_options}
-            {img}
-        </div>
     );
 }
