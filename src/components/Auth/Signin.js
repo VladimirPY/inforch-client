@@ -15,13 +15,13 @@ import Input from "../UI/Input";
     render(){
         return (
             <form id = 'signin-form' onSubmit = {this.handleSubmit}>
-                <Input lableText = 'EMAIL ADRESS' inputAttributes = {{id: "input-email", type: 'email', name: 'email'}}/>
+                <Input lableText = 'EMAIL ADRESS' inputAttributes = {{id: "input-email", type: 'email', name: 'email', className : 'border dark'}}/>
                 <div className = 'name-fields flex j-space-between'>
-                    <Input lableText = 'NAME' inputAttributes = {{id: "input-name", type: 'text', name: 'name'}}/>
-                    <Input lableText = 'LAST NAME' inputAttributes = {{id: "input-last-name", type: 'text', name: 'last_name'}}/>
+                    <Input lableText = 'NAME' inputAttributes = {{id: "input-name", type: 'text', name: 'name', className : 'border dark'}}/>
+                    <Input lableText = 'LAST NAME' inputAttributes = {{id: "input-last-name", type: 'text', name: 'last_name', className : 'border dark'}}/>
                 </div>          
-                <Input lableText = 'PASSWORD' inputAttributes = {{id: "input-password", type: 'password', name: 'last_name'}}/>
-                <Input lableText = 'BIRTH DATE' inputAttributes = {{id: "input-birth-date", type: 'date', name: 'birth-date'}}/>
+                <Input lableText = 'PASSWORD' inputAttributes = {{id: "input-password", type: 'password', name: 'last_name', className : 'border dark'}}/>
+                <Input lableText = 'BIRTH DATE' inputAttributes = {{id: "input-birth-date", type: 'date', name: 'birth-date', className : 'border dark'}}/>
                 <button type = 'submit' className = 'btn dark'>SIGN IN</button>
             </form>
         )

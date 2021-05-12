@@ -40,11 +40,11 @@ body, html {
     outline: none;
     border: none;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 18px;
-    color: #FFFCF2;
-    padding: 22px 70px;
-    border-radius: 4px;
+    color: $base-background-color;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 15px 55px;
+    border-radius: 2px;
 }
 
 .btn.dark{
@@ -56,10 +56,11 @@ body, html {
 }
 
 .btn.light{
-    background-color: $dark-theme-color;
+    background-color: $base-background-color!important;
+    color: $dark-theme-color;
 }
 
-.gray-button {
+.btn.gray {
     background-color: $dark-theme-color;
 }
 
@@ -71,12 +72,15 @@ body, html {
     background-color: $light-color;
 }
 
-.border-orange{
+.border.orange{
     border-color: $orange-theme-color!important;
+}
+.border.dark{
+    border-color: $dark-theme-color!important;
 }
 
 .border{
-    border: solid 10px;
+    border: solid 5px;
 }
 
 .hide{

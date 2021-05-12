@@ -16,17 +16,19 @@ import Input from '../UI/Input.js';
         const emailAttributes = {
             id : 'input-email',
             name : 'email',
-            type : 'text'
+            type : 'text',
+            className : 'border dark'
         };
         const passwordAttributes = {
             id : 'input-password',
             name : 'password',
-            type : 'password'
+            type : 'password',
+            className : 'border dark'
         };
         return (
             <form id = 'signin-form' onSubmit = {this.handleSubmit}>
-                <Input lableText = 'EMAIL ADRESS' inputAttributes = {emailAttributes}/>
-                <Input lableText = 'PASSWORD' inputAttributes = {passwordAttributes}/>
+                <Input lableText = 'EMAIL ADRESS' inputAttributes = {emailAttributes} />
+                <Input lableText = 'PASSWORD' inputAttributes = {passwordAttributes} />
                 <button type = 'submit' className = 'btn dark'>LOG IN</button>
             </form>
         )

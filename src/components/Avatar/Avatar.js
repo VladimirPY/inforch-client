@@ -26,7 +26,7 @@ export default function Avatar(props){
     return(
         <div id = 'profile-avatar'>
             {option_list}
-            <img id = {avatar_btn_id} className = 'avatar border border-orange back-light' src = {process.env.PUBLIC_URL + "/images/photo.svg"}/>
+            <img id = {avatar_btn_id} className = 'avatar border orange back-light' src = {process.env.PUBLIC_URL + "/images/photo.svg"}/>
         </div>
     );
 };

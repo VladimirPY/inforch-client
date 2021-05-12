@@ -9,8 +9,6 @@ export default function PostList(props){
         console.log( value);
     }
 
-    return (
-        ''
-    );
+    return ('');
 
 }

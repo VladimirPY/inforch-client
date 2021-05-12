@@ -2,10 +2,9 @@
 .input-field{
     width: 100%;
     input{
-        height: 60px;
+        height: 40px;
         width: 100%;
         background: $base-background-color;
-        border: 10px solid $dark-theme-color;
         box-sizing: border-box;
     }
     label {

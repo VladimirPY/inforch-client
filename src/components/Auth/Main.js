@@ -11,8 +11,10 @@ export default class Main extends React.Component {
     constructor (props){
         super(props);
         this.state = {
-            formType : props.formType
+            formType : props.formType,
+            closeEvent : props.closeEvent
         };
+        console.log(this.state);
     }
 
     render(){
@@ -72,11 +74,10 @@ export default class Main extends React.Component {
     }
 
     closeForm(event){
-        event.preventDefault();
-        ReactDOM.render(
-            <App/>,
-            document.getElementById('root')
-        );
+        if(this.state.closeEvent){
+            this.state.closeEvent(event);
+        }
+        delete(this);
     }
 
 } 

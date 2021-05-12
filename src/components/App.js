@@ -7,7 +7,7 @@ import AuthMain from './Auth/Main';
 function App() {
   return (
     <div>
-    <Header isAuth = {true}/>
+    <Header isGuest = {true}/>
     <PostList />
     </div>
   );

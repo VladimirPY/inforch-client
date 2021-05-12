@@ -1,0 +1,46 @@
+@import '../../colors.scss';
+header.header-auth{
+    height: 70px;
+    padding: 0px 50px;
+    .btns-block{
+        position: relative;
+        align-items: center;
+        height: 100%;
+        #profile-avatar{
+            margin-left: 80px;
+        }
+        img{
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+        & > img{
+            padding: 8px;
+            margin: 0px 20px;
+        }
+
+        button{
+            margin: 0px 20px;
+        }
+
+    }
+    .input-field{
+        margin-left: 50px;
+        width: 400px;
+    }
+    //TODO: below
+    // @media (max-width: 760px) {
+    //     padding: 0px;
+    //     .btns-block{
+    //         width: 100%;
+    //         .btn {
+    //             font-size: 13px;
+    //             padding: 12px 40px; 
+    //         }
+    //     }
+
+    //     .header-logo{
+    //         display: none;
+    //     }
+    // }
+}
